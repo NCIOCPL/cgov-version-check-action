@@ -92,12 +92,14 @@ describe('main action code', () => {
 
 			// Github is actually an object with a bunch of class instances and
 			// functions hanging off.
-			jest.mock('@actions/github', () => ({
-				context: {
-					eventName: 'pull_request',
-				},
-			}));
-
+			// Github is actually an object with a bunch of class instances and
+			// functions hanging off. For get Octokit we don't care what it is
+			// returning cause we are not using it?
+			github.getOctokit = jest.fn().mockReturnValueOnce('octokit');
+			const mockContext = {
+				eventName: 'pull_request',
+			};
+			github.context = mockContext;
 			await run();
 
 			expect(core.setFailed).toHaveBeenCalledWith(
