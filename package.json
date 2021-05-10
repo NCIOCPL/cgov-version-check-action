@@ -1,6 +1,6 @@
 {
   "name": "cgov-version-check-action",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "GitHub Action to check a packages version for Cgov workflows",
   "main": "dist/index.js",
   "scripts": {
@@ -12,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@octokit/request-error": "^2.0.5",
     "@vercel/ncc": "^0.27.0",
     "eslint": "^7.23.0",
     "eslint-config-prettier": "^8.1.0",
@@ -30,7 +31,7 @@
   "jest": {
     "testEnvironment": "node",
     "collectCoverageFrom": [
-      "src/cgov-version-check"
+      "src/**/*.js"
     ],
     "coverageThreshold": {
       "global": {
