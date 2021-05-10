@@ -1,0 +1,18 @@
+name: "Tests"
+
+on:
+  pull_request:
+   push:
+    branches-ignore: ## Do not do this for main, it has its own workflow.
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Branch
+        uses: actions/checkout@v1
+      - name: Install dependencies
+        run: npm ci
+      - name: Test
+        run: npm test

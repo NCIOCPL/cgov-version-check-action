@@ -1,0 +1,24 @@
+name: 'Cgov Version Check'
+description: |
+  Performs a number of checks on a package to ensure it can be published.
+branding:
+  icon: 'check-circle'
+  color: 'green'
+inputs:
+  package-type:
+    description: 'The type of package. For now, only "npm" is allowed.'
+    required: true
+  checks-to-perform:
+    description: |
+      A comma separated lists of checks to perform. All of these checks will be evaluated to determine if the package can be published.
+      The valid "npm" checks are:
+        - 'isGreaterVersion' - Is the package version greater than the previous commit.
+        - 'hasNeverBeenPublished' - Ensures there is no package in the registry with the same version.
+        - 'hasNeverBeenReleased' - Ensure there is no release tag for the same version
+    required: true
+  repo-token:
+    description: 'The GITHUB_TOKEN secret'
+    required: true
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
