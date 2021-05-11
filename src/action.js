@@ -54,7 +54,7 @@ async function run() {
 		if (github.context.eventName !== 'push') {
 			throw new Error('This action can only handle push events at the moment.');
 		}
-
+		core.debug(github.context);
 		// @actions/github also provides a better way to setup the github
 		// client within the workflow.
 		const octokit = github.getOctokit(githubToken);
