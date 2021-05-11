@@ -1,4 +1,3 @@
-const core = require('@actions/core');
 const requestCache = {};
 
 /**
@@ -10,11 +9,6 @@ const requestCache = {};
  * @param {string} commitSHA the commit hash for the commit you want the version of
  */
 const getPackageVersion = async (octokit, owner, repo, commitSHA) => {
-	core.debug({
-		owner,
-		repo,
-		commitSHA,
-	});
 	try {
 		const cachedRequest = requestCache[owner + repo + commitSHA];
 

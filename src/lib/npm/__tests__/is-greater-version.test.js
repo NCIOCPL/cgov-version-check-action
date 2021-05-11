@@ -30,12 +30,17 @@ describe('npm-is-greater-version', () => {
 		const actual = await isGreaterVersion(mockOctokit, mockContext);
 		expect(actual).toBeTruthy();
 		expect(getPackageVersion.mock.calls.length).toBe(2);
+
 		// Call 1.
-		expect(getPackageVersion.mock.calls[0][1]).toBe(
+		expect(getPackageVersion.mock.calls[0][1]).toBe('userName');
+		expect(getPackageVersion.mock.calls[0][2]).toBe('package-release-test');
+		expect(getPackageVersion.mock.calls[0][3]).toBe(
 			'e311b74c1e615ccef73cfe8d708c40b7480ce549'
 		);
 		// Call 2.
-		expect(getPackageVersion.mock.calls[1][1]).toBe(
+		expect(getPackageVersion.mock.calls[1][1]).toBe('userName');
+		expect(getPackageVersion.mock.calls[1][2]).toBe('package-release-test');
+		expect(getPackageVersion.mock.calls[1][3]).toBe(
 			'38f97e063d849701fd0bef158ebf4f3001edefd7'
 		);
 	});
@@ -63,11 +68,15 @@ describe('npm-is-greater-version', () => {
 		expect(actual).not.toBeTruthy();
 		expect(getPackageVersion.mock.calls.length).toBe(2);
 		// Call 1.
-		expect(getPackageVersion.mock.calls[0][1]).toBe(
+		expect(getPackageVersion.mock.calls[0][1]).toBe('userName');
+		expect(getPackageVersion.mock.calls[0][2]).toBe('package-release-test');
+		expect(getPackageVersion.mock.calls[0][3]).toBe(
 			'e311b74c1e615ccef73cfe8d708c40b7480ce549'
 		);
 		// Call 2.
-		expect(getPackageVersion.mock.calls[1][1]).toBe(
+		expect(getPackageVersion.mock.calls[1][1]).toBe('userName');
+		expect(getPackageVersion.mock.calls[1][2]).toBe('package-release-test');
+		expect(getPackageVersion.mock.calls[1][3]).toBe(
 			'38f97e063d849701fd0bef158ebf4f3001edefd7'
 		);
 	});
@@ -95,11 +104,15 @@ describe('npm-is-greater-version', () => {
 		expect(actual).not.toBeTruthy();
 		expect(getPackageVersion.mock.calls.length).toBe(2);
 		// Call 1.
-		expect(getPackageVersion.mock.calls[0][1]).toBe(
+		expect(getPackageVersion.mock.calls[0][1]).toBe('userName');
+		expect(getPackageVersion.mock.calls[0][2]).toBe('package-release-test');
+		expect(getPackageVersion.mock.calls[0][3]).toBe(
 			'e311b74c1e615ccef73cfe8d708c40b7480ce549'
 		);
 		// Call 2.
-		expect(getPackageVersion.mock.calls[1][1]).toBe(
+		expect(getPackageVersion.mock.calls[1][1]).toBe('userName');
+		expect(getPackageVersion.mock.calls[1][2]).toBe('package-release-test');
+		expect(getPackageVersion.mock.calls[1][3]).toBe(
 			'38f97e063d849701fd0bef158ebf4f3001edefd7'
 		);
 	});
@@ -131,7 +144,9 @@ describe('npm-is-greater-version', () => {
 
 		// Note: only one call will happen before it throws.
 		expect(getPackageVersion.mock.calls.length).toBe(1);
-		expect(getPackageVersion.mock.calls[0][1]).toBe(
+		expect(getPackageVersion.mock.calls[0][1]).toBe('userName');
+		expect(getPackageVersion.mock.calls[0][2]).toBe('package-release-test');
+		expect(getPackageVersion.mock.calls[0][3]).toBe(
 			'e311b74c1e615ccef73cfe8d708c40b7480ce549'
 		);
 	});

@@ -1,6 +1,5 @@
 const isGreater = require('../util/is-greater');
 const getPackageVersion = require('./util/get-package-version');
-const core = require('@actions/core');
 
 /**
  * This determines if a package version is newer than a previous one.
@@ -13,9 +12,16 @@ const core = require('@actions/core');
  * @param {Context} context a github Context
  */
 const isGreaterVersion = async (octokit, context) => {
-	core.debug(context.payload);
-	const oldVersion = await getPackageVersion(octokit, context.payload.before);
-	const newVersion = await getPackageVersion(octokit, context.sha);
+	const repo = context.payload.repository.name;
+	const owner = context.payload.repository.owner.name;
+
+	const oldVersion = await getPackageVersion(
+		octokit,
+		owner,
+		repo,
+		context.payload.before
+	);
+	const newVersion = await getPackageVersion(octokit, owner, repo, context.sha);
 
 	return isGreater(oldVersion, newVersion);
 };
