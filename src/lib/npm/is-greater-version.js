@@ -13,7 +13,7 @@ const core = require('@actions/core');
  * @param {Context} context a github Context
  */
 const isGreaterVersion = async (octokit, context) => {
-	core.debug(context);
+	core.debug(context.payload);
 	const oldVersion = await getPackageVersion(octokit, context.payload.before);
 	const newVersion = await getPackageVersion(octokit, context.sha);
 
