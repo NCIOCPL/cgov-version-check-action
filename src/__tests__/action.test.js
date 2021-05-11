@@ -127,7 +127,7 @@ describe('main action code', () => {
 			github.getOctokit = jest.fn().mockReturnValueOnce('octokit');
 			const mockContext = {
 				eventName: 'push',
-				payload: { push: require('./mock-push-payload.json') },
+				payload: require('./mock-push-payload.json'),
 				sha: '',
 				ref: '',
 				workflow: '',
@@ -176,7 +176,7 @@ describe('main action code', () => {
 			github.getOctokit = jest.fn().mockReturnValueOnce('octokit');
 			const mockContext = {
 				eventName: 'push',
-				payload: { push: require('./mock-push-payload.json') },
+				payload: require('./mock-push-payload.json'),
 				sha: '',
 				ref: '',
 				workflow: '',
@@ -224,7 +224,7 @@ describe('main action code', () => {
 			github.getOctokit = jest.fn().mockReturnValueOnce('octokit');
 			const mockContext = {
 				eventName: 'push',
-				payload: { push: require('./mock-push-payload.json') },
+				payload: require('./mock-push-payload.json'),
 				sha: '',
 				ref: '',
 				workflow: '',
@@ -276,7 +276,7 @@ describe('main action code', () => {
 			github.getOctokit = jest.fn().mockReturnValueOnce('octokit');
 			const mockContext = {
 				eventName: 'push',
-				payload: { push: require('./mock-push-payload.json') },
+				payload: require('./mock-push-payload.json'),
 				sha: '',
 				ref: '',
 				workflow: '',
@@ -327,7 +327,7 @@ describe('main action code', () => {
 			github.getOctokit = jest.fn().mockReturnValueOnce('octokit');
 			const mockContext = {
 				eventName: 'push',
-				payload: { push: require('./mock-push-payload.json') },
+				payload: require('./mock-push-payload.json'),
 				sha: '',
 				ref: '',
 				workflow: '',
