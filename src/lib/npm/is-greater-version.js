@@ -12,7 +12,17 @@ const getPackageVersion = require('./util/get-package-version');
  * @param {Context} context a github Context
  */
 const isGreaterVersion = async (octokit, context) => {
-	const oldVersion = await getPackageVersion(octokit, context.payload.before);
+	if (!context.payload.push.before) {
+		throw new Error(`Cannot get context.payload.push.before`);
+	}
+	if (!context.sha) {
+		throw new Error(`Cannot get current sha`);
+	}
+
+	const oldVersion = await getPackageVersion(
+		octokit,
+		context.payload.push.before
+	);
 	const newVersion = await getPackageVersion(octokit, context.sha);
 
 	return isGreater(oldVersion, newVersion);

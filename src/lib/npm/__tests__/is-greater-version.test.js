@@ -16,7 +16,7 @@ describe('npm-is-greater-version', () => {
 		const mockOctokit = {};
 		const mockContext = {
 			eventName: 'push',
-			payload: require('../../../__tests__/mock-push-payload.json'),
+			payload: { push: require('../../../__tests__/mock-push-payload.json') },
 			sha: '38f97e063d849701fd0bef158ebf4f3001edefd7',
 			ref: '',
 			workflow: '',
@@ -48,7 +48,7 @@ describe('npm-is-greater-version', () => {
 		const mockOctokit = {};
 		const mockContext = {
 			eventName: 'push',
-			payload: require('../../../__tests__/mock-push-payload.json'),
+			payload: { push: require('../../../__tests__/mock-push-payload.json') },
 			sha: '38f97e063d849701fd0bef158ebf4f3001edefd7',
 			ref: '',
 			workflow: '',
@@ -80,7 +80,7 @@ describe('npm-is-greater-version', () => {
 		const mockOctokit = {};
 		const mockContext = {
 			eventName: 'push',
-			payload: require('../../../__tests__/mock-push-payload.json'),
+			payload: { push: require('../../../__tests__/mock-push-payload.json') },
 			sha: '38f97e063d849701fd0bef158ebf4f3001edefd7',
 			ref: '',
 			workflow: '',
@@ -114,7 +114,7 @@ describe('npm-is-greater-version', () => {
 		const mockOctokit = {};
 		const mockContext = {
 			eventName: 'push',
-			payload: require('../../../__tests__/mock-push-payload.json'),
+			payload: { push: require('../../../__tests__/mock-push-payload.json') },
 			sha: '38f97e063d849701fd0bef158ebf4f3001edefd7',
 			ref: '',
 			workflow: '',
