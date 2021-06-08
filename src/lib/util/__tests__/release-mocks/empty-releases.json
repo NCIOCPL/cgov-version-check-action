@@ -1,0 +1,9 @@
+{
+  "repository": {
+    "releases": {
+      "totalCount": 0,
+      "nodes": [],
+      "pageInfo": { "hasNextPage": false, "startCursor": null }
+    }
+  }
+}
