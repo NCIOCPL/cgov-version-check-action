@@ -1,0 +1,12 @@
+{
+  "repository": {
+    "releases": {
+      "totalCount": 249,
+      "nodes": [{ "tag": { "name": "v1.0.0", "prefix": "refs/tags/" } }],
+      "pageInfo": {
+        "hasNextPage": true,
+        "startCursor": "Y3Vyc29yOnYyOpHOAamKGg=="
+      }
+    }
+  }
+}
