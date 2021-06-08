@@ -1,0 +1,21 @@
+{
+  "repository": {
+    "releases": {
+      "totalCount": 8,
+      "nodes": [
+        { "tag": { "name": "v1.0.0", "prefix": "refs/tags/" } },
+        { "tag": { "name": "v1.0.1", "prefix": "refs/tags/" } },
+        { "tag": { "name": "v1.0.2", "prefix": "refs/tags/" } },
+        { "tag": { "name": "v1.0.3", "prefix": "refs/tags/" } },
+        { "tag": { "name": "v1.0.4", "prefix": "refs/tags/" } },
+        { "tag": { "name": "v1.1.0", "prefix": "refs/tags/" } },
+        { "tag": { "name": "v1.2.0", "prefix": "refs/tags/" } },
+        { "tag": { "name": "v1.2.2", "prefix": "refs/tags/" } }
+      ],
+      "pageInfo": {
+        "hasNextPage": false,
+        "startCursor": "Y3Vyc29yOnYyOpHOAamKGg=="
+      }
+    }
+  }
+}
