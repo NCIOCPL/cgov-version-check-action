@@ -1,6 +1,6 @@
 {
   "name": "cgov-version-check-action",
-  "version": "0.0.8",
+  "version": "0.0.8-beta1",
   "description": "GitHub Action to check a packages version for Cgov workflows",
   "main": "dist/index.js",
   "scripts": {
