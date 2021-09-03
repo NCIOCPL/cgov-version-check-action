@@ -1,0 +1,12 @@
+{
+	"repository": {
+		"packages": {
+			"totalCount": 0,
+			"nodes": [],
+			"pageInfo": {
+				"hasNextPage": false,
+				"startCursor": null
+			}
+		}
+	}
+}

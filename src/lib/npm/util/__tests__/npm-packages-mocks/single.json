@@ -1,0 +1,18 @@
+{
+	"repository": {
+		"packages": {
+			"totalCount": 1,
+			"nodes": [
+				{
+					"name": "glossary-app",
+					"id": "MDc6UGFja2FnZTE2MTA1Nw==",
+					"packageType": "NPM"
+				}
+			],
+			"pageInfo": {
+				"hasNextPage": false,
+				"startCursor": "MQ"
+			}
+		}
+	}
+}

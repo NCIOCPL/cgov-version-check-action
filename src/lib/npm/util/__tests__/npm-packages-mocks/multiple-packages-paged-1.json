@@ -1,0 +1,18 @@
+{
+	"repository": {
+		"packages": {
+			"totalCount": 2,
+			"nodes": [
+				{
+					"name": "ncids-css",
+					"id": "MDc6UGFja2FnZTc1ODUyMg==",
+					"packageType": "NPM"
+				}
+			],
+			"pageInfo": {
+				"hasNextPage": true,
+				"startCursor": "MQ"
+			}
+		}
+	}
+}

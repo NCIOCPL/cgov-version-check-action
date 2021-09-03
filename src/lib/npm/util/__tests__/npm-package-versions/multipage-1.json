@@ -1,0 +1,23 @@
+{
+	"organization": {
+		"packages": {
+			"nodes": [
+				{
+					"name": "glossary-app",
+					"versions": {
+						"nodes": [
+							{
+								"version": "1.2.2"
+							}
+						],
+						"totalCount": 30,
+						"pageInfo": {
+							"hasNextPage": true,
+							"startCursor": "Y3Vyc29yOnYyOpHOAHsblg=="
+						}
+					}
+				}
+			]
+		}
+	}
+}

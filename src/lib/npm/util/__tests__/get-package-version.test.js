@@ -1,9 +1,9 @@
 const { RequestError } = require('@octokit/request-error');
 
 // API Responses
-const newJsonResponse = require('./good_res.new.json');
-const dirResponse = require('./dir-response.json');
-const errorResponse = require('./404.json');
+const newJsonResponse = require('./package-version-mocks/good_res.new.json');
+const dirResponse = require('./package-version-mocks/dir-response.json');
+const errorResponse = require('./package-version-mocks/404.json');
 
 describe('getPackageVersion', () => {
 	beforeEach(() => {

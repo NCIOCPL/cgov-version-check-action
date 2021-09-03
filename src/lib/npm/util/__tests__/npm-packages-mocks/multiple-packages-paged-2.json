@@ -1,0 +1,18 @@
+{
+	"repository": {
+		"packages": {
+			"totalCount": 2,
+			"nodes": [
+				{
+					"name": "ncids-react",
+					"id": "MDc6UGFja2FnZTc1ODIxOA==",
+					"packageType": "NPM"
+				}
+			],
+			"pageInfo": {
+				"hasNextPage": false,
+				"startCursor": "Mg"
+			}
+		}
+	}
+}
